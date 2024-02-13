@@ -30,4 +30,8 @@ function pow(x,n){
     return n==1?x:pow(x,n-1)*x
 }
 
-console.log(pow(2,3))
+x = prompt("Введите x")
+
+n = prompt("Введите n")
+
+(n >= 1 && n % 1== 0 )? alert(pow(x,n)): alert("ошибка")
