@@ -1,0 +1,6 @@
+new Promise(function(resolve, reject) {
+    setTimeout(() => {
+      throw new Error("Whoops!");
+    }, 1000);  //ошибка не дойдет
+  }).catch(alert);
+
