@@ -1,0 +1,23 @@
+<html>
+
+<body>
+  <script>
+    // alert(document.body.lastChild.nodeType); 1
+  </script>
+  <script>
+    let body = document.body;
+  
+    body.innerHTML = "<!--" + body.tagName + "-->";
+  
+    alert( body.firstChild.data ); // body
+  </script>
+</body>
+
+</html>
+
+
+<!-- Объектом какого класса является document? [object HTMLDocument]
+
+Какое место он занимает в DOM-иерархии? HTMLDocument -> Document -> Node
+
+Наследует ли он от Node или от Element, или может от HTMLElement? -->
