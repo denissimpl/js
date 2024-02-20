@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div tabindex="1" id="divtext" style="border: 1px solid black;">
+        Text here
+    </div>
+    <script>
+        let textarea = document.createElement("textarea")
+        let div = divtext
+        div.onfocus = function () {
+            textarea.textContent = div.textContent
+            document.body.replaceChild(textarea, div)
+            
+        }
+        textarea.onblur = function () {
+            div.textContent = textarea.textContent
+            document.body.replaceChild(div, textarea)
+        }
+    </script>
+</body>
+</html>
